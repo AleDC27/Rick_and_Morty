@@ -1,0 +1,7 @@
+.content_search{
+    background: rgb(105, 42, 42);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }

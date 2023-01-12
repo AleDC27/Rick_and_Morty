@@ -1,0 +1,30 @@
+.card{
+background: green;
+display: flex;
+flex-direction: column;
+width: 200px;
+position: relative;
+margin: 10px;
+}
+
+.card h4{
+    text-align: center;
+}
+
+.card img{
+    clip-path: polygon(30.7% 0%, 69.3% 0%, 100% 30%, 100% 70%, 69.3% 100%, 30.7% 100%, 0% 70%, 0% 30%);
+
+}
+
+.close{
+    background:rgb(165, 4, 4);
+    color: rgb(230, 217, 217);
+    font-size: 1.5em;
+    border-radius: 7px;
+    position: absolute;
+    z-index: 1;
+    right: 5%;
+}
+
+.x{
+}
