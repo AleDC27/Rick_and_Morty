@@ -12,8 +12,8 @@ export default function SearchBar(props) {
 
    return (
       <div className={`${styles.content_buscador}`}>
-         <input className={`${styles.buscador}`} type='search' value={character} onChange={handleChange} />
-      <button onClick={()=>{onSearch(character)}} id='boton'>Agregar</button>
+         <input className={`${styles.buscador}`} type='search' value={character} onChange={handleChange}/>
+         <button onClick={()=>{onSearch(character)}} id='boton'>Agregar</button>
       </div>
    );
 }

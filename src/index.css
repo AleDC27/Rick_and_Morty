@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(https://i.pinimg.com/736x/b7/bf/07/b7bf07fdd67756f0157daf2de47fab73.jpg);
-  background-size: cover;
-  background-position:center;
+  background-image: url(./assets/Fondos-para-páginas-web.jpg);
+  /*background-size: cover;
+  background-position:center;*/
 }
 
 code {

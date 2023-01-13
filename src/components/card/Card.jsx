@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styles from './card.module.css'
 
 export default function Card(props) {
@@ -6,7 +7,9 @@ export default function Card(props) {
             <span className={`${styles.x}`}>x</span>
          </button>
          <img  src={props.image} alt={props.name} />
-         <h2>{props.name}</h2>
+         <Link to={`/detail/${props.id}`}>
+         <h3>{props.name}</h3>
+         </Link>
          <h4>{props.species}</h4>
          <h4>{props.gender}</h4>
       </div>
