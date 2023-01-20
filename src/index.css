@@ -5,9 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./assets/Fondos-para-páginas-web.jpg);
+  background-image: url(./assets/Captura\ de\ pantalla\ \(293\).png);
   /*background-size: cover;
   background-position:center;*/
+  box-sizing: border-box;
 }
 
 code {

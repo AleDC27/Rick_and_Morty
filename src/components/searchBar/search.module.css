@@ -1,7 +1,6 @@
 .content_buscador{
     display: flex;
     justify-content: center;
-    border: 2px solid rgb(18, 27, 18);
     height: 40%;
     width: 70%;
 }

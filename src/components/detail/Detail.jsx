@@ -1,5 +1,5 @@
 import { useEffect, useState  } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams ,useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 export default function Detail() {
@@ -8,6 +8,11 @@ export default function Detail() {
 
     const [character,setCharacter]=useState({})
     // console.log(typeof character.origin ==="object")
+
+    const navigate=useNavigate();
+
+    const handleClick=()=>navigate("/home");
+    
 
 
     useEffect(() => {
@@ -30,20 +35,22 @@ export default function Detail() {
   return (
 
     // <div>{character?
-        <div style={{background:"red"}}>
+        <div style={{background:"red" ,display:"inline-block" }}>
         <h1>{character.name}</h1>
         <h5>{character.status} </h5>
         <h5>{character.species} </h5>
         <h5>{character.gender} </h5>
         <h5>{character.origin?.name} </h5>
         <img src={character.image} alt="" />
-        <Link to="/home">
+        {/* <Link to="/home">
         <button >
             <h3>Home</h3>
         </button>
-        </Link>
+        </Link> */}
 
         {/* </div>:""}   */}
+
+        <button onClick={handleClick}>HOME</button>
         </div>
 
 
