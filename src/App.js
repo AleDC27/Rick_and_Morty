@@ -6,6 +6,7 @@ import About from './components/about/About'
 import Detail from './components/detail/Detail'
 import Form from './components/form/Form.jsx'
 import { getDefaultNormalizer } from '@testing-library/react'
+import  Favorites from './components/favorites/Favorites.jsx'
 
 
 function App () {
@@ -57,6 +58,7 @@ const onClose=(id)=>{
         <Route path='/' element={<Form login={login} />}/>
         <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>} />
         <Route path='/about' element={<About/>} />
+        <Route path='/favorites' element={<Favorites/>} />
         <Route path='/detail/:detailId' element={<Detail/>}/>
       </Routes>
     </div>

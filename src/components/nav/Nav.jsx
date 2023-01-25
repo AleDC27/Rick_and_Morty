@@ -8,6 +8,8 @@ export default function Nav({ onSearch }) {
     <div className={style.content_search}>
       <Link to="/about">About</Link>
       <Link to="home">Home</Link>
+      <Link to="/favorites">Favorites</Link>
+
       <SearchBar onSearch={onSearch} />
     </div>
   );

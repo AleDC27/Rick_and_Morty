@@ -5,7 +5,7 @@ export default function About() {
     <div style={{background:"white"}} >
 
       <br /><br />
-      <h1>Aye te amo</h1>
+      <h1>te quiero pa</h1>
 
 
     </div>
