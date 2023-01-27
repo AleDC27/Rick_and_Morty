@@ -5,7 +5,8 @@ export default function About() {
     <div style={{background:"white"}} >
 
       <br /><br />
-      <h1>te quiero pa</h1>
+      <h1>Rick and Morty</h1>
+      <p>esta aplicacion fue creada por Walter Alejandro Gordillo </p>
 
 
     </div>

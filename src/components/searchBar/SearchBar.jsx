@@ -6,14 +6,18 @@ export default function SearchBar(props) {
    const [character,setCharacter]=useState("")
 
 
-   const handleChange=(e)=>{
-      setCharacter(e.target.value)
+   const handleChange=(event)=>{
+      setCharacter(event.target.value)
+   }
+
+   const handleSubmit=(e)=>{
+      e.preventDefault()
    }
 
    return (
-      <div className={`${styles.content_buscador}`}>
+      <form className={`${styles.content_buscador}`} onSubmit={handleSubmit} >
          <input className={`${styles.buscador}`} type='search' value={character} onChange={handleChange}/>
-         <button onClick={()=>{onSearch(character)}} id='boton'>Agregar</button>
-      </div>
+         <button className={`${styles.search_button}`} onClick={()=>{onSearch(character)}} id='boton'>Agregar</button>
+      </form>
    );
 }

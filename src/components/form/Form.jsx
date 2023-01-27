@@ -44,7 +44,7 @@ export default function Form(props) {
           type="password"
           id="password"
           name="password"
-          valur={userData.password}
+          value={userData.password}
           onChange={handleinputChange}
           placeholder="password"
           className={s.input_form}

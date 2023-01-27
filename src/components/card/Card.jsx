@@ -16,6 +16,7 @@ export function Card(props) {
          props.addFavorite(props)
       }
    }
+   
    useEffect(() => {
       props.myFavorites?.forEach((fav) => {
             if (fav.id === props.id) {
@@ -45,22 +46,23 @@ export function Card(props) {
       </div>
 }
 
+export function mapStateToProps (state){
+   return {
+      myFavorites: state.myFavorites
+   }
+}
+
 export function mapDispatchToProps(dispatch){
    return {
       addFavorite: function(fav){
          dispatch(addFavorite(fav))
       },
-
       deleteFavorite: function(id){
          dispatch(deleteFavorite(id))
       }
    }
 }
 
-export function mapStateToProps (state){
-   return {
-      myFavorites: state.myFavorites
-   }
-}
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

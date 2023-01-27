@@ -1,7 +1,12 @@
 .content_search{
-    background: rgb(105, 42, 42);
-    height: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+ }
+ .link{
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 5px;
+    background: black;
+    padding: 5px;
  }
