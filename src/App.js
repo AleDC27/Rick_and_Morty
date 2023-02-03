@@ -43,6 +43,21 @@ function onSearch(character) {
            window.alert('No hay personajes con ese ID');
         }
      });
+         /////
+         setCharacters(characters.filter(char=>char.id!=character))
+         /////
+}
+
+function random() {
+  const num=Math.round(Math.random()*826)
+  const number=num
+  fetch(`https://rickandmortyapi.com/api/character/${number}`)
+  .then((response) => response.json())
+  .then((data) => {
+     if (data.name) {
+        setCharacters((oldChars) => [...oldChars, data]); 
+      }})
+      setCharacters(characters.filter(char=>char.id!=number))
 }
 
 const onClose=(id)=>{
@@ -53,7 +68,7 @@ const onClose=(id)=>{
   return (
     <div className='App' >
       {location.pathname!=="/"?
-      <Nav onSearch={onSearch}/>:null}
+      <Nav onSearch={onSearch} random={random}/>:null}
       <Routes>
         <Route path='/' element={<Form login={login} />}/>
         <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>} />

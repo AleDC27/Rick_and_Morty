@@ -37,11 +37,14 @@ export function Card(props) {
             <span className={`${styles.x}`}>x</span>
          </button>
          <img  src={props.image} alt={props.name} />
-         <Link to={`/detail/${props.id}`}>
-         <h5>{props.name}</h5>
+         <Link to={`/detail/${props.id}`} style={{"textDecoration":"none"}}>
+         <h4 className={`${styles.name}`}>{props.name}</h4>
          </Link>
+         <div className={`${styles.content_span}`}>
          <span>{props.species}</span>
          <span>{props.gender}</span>
+         </div>
+        
          
       </div>
 }

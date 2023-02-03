@@ -14,7 +14,7 @@
 }
 .card:hover {
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
-    background-color: #3ab62a;
+    background-color:  #b4ceb1;
     height: fit-content;
    }
 
@@ -36,10 +36,13 @@
     font-size: 15px;
 }
 
-.card h5{
+.name{
+    margin: 7px 0 0 0 ;
+    text-align: center;
     font-weight: bold;
     letter-spacing: .1em;
     object-fit: contain;
+    color: rgb(221, 229, 235);
 }
 
 .card img{
@@ -58,7 +61,18 @@
     background-color: #f0f0f0;
     z-index: 99999;
    }
-.card span{
-    margin: 0 20px;
+
+
+
+.content_span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+   
+.content_span span{
+    margin: 0 2px;
+    font-weight: bold;
+    object-fit: contain;
 }
 
