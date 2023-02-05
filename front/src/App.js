@@ -45,9 +45,25 @@ function onSearch(character) {
         }
      });
          /////
-         setCharacters(characters.filter(char=>char.id!=character))
+         setCharacters(characters.filter(char=>char.id!==character))
          /////
 }
+
+//edit del back
+// function onSearch(character) {
+//   fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+//      .then((response) => response.json())
+//      .then((data) => {
+//         if (data.name) {
+//            setCharacters((oldChars) => [...oldChars, data]);
+//         } else {
+//            window.alert('No hay personajes con ese ID');
+//         }
+//      });
+//          /////
+//          setCharacters(characters.filter(char=>char.id!=character))
+//          /////
+// }
 
 function random() {
   const num=Math.round(Math.random()*826)
@@ -58,7 +74,7 @@ function random() {
      if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]); 
       }})
-      setCharacters(characters.filter(char=>char.id!=number))
+      setCharacters(characters.filter(char=>char.id!==number))
 }
 
 const onClose=(id)=>{
