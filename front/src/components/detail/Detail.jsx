@@ -1,6 +1,6 @@
 import { useEffect, useState  } from 'react'
 import { useParams ,useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 export default function Detail() {
 
@@ -16,12 +16,14 @@ export default function Detail() {
 
 
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+      //front
+      //  fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+      //back
+        fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
           .then((response) => response.json())
           .then((char) => {
             if (char.name) {
               setCharacter(char);
-             
             } else {
               window.alert("No hay personajes con ese ID");
             }

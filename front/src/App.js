@@ -34,24 +34,9 @@ useEffect(() => {
   !access && navigate('/');
 }, [access]);
 
-function onSearch(character) {
-  fetch(`https://rickandmortyapi.com/api/character/${character}`)
-     .then((response) => response.json())
-     .then((data) => {
-        if (data.name) {
-           setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-           window.alert('No hay personajes con ese ID');
-        }
-     });
-         /////
-         setCharacters(characters.filter(char=>char.id!==character))
-         /////
-}
-
-//edit del back
+//front 
 // function onSearch(character) {
-//   fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+//   fetch(`https://rickandmortyapi.com/api/character/${character}`)
 //      .then((response) => response.json())
 //      .then((data) => {
 //         if (data.name) {
@@ -64,6 +49,49 @@ function onSearch(character) {
 //          setCharacters(characters.filter(char=>char.id!=character))
 //          /////
 // }
+
+//edit del back
+ function onSearch(character) {
+  //web Server
+  //fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+  //Promesas
+  fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
+     .then((response) => response.json())
+     .then((data) => {
+      console.log(data)
+        if (data.name) {
+           setCharacters((oldChars) => [...oldChars, data]);
+        } else {
+           window.alert('No hay personajes con ese ID');
+        }
+     });
+         ///
+         setCharacters(characters.filter(char=>char.id!=character))
+         ///
+}
+
+//para que no se repitan codigo extra pero tiene una advertencia
+// const onSearch = (character) => {
+//   let flag = true;
+//   characters.forEach((element) => {
+//     if (parseInt(character) === element.id) {
+//       window.alert(
+//         "El personaje que desea agregar ya se encuentra en la aplicación"
+//       );
+//       flag = false
+//     }
+//   });
+//   flag &&
+//     fetch(`https://rickandmortyapi.com/api/character/${character}`)
+//       .then((response) => response.json())
+//       .then((data) => {
+//         if (data.name) {
+//           setCharacters((oldChars) => [...oldChars, data]);
+//         } else {
+//           window.alert("No hay personajes con ese ID");
+//         }
+//       });
+// };
 
 function random() {
   const num=Math.round(Math.random()*826)

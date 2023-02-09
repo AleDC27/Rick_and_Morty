@@ -10,7 +10,6 @@ export default function Nav({ onSearch, random }) {
       <Link to="home" className={`${style.link}`}>Home</Link>
       <Link to="/favorites" className={`${style.link}`}>Favorites</Link>
       <Link to="/" className={`${style.link}`}>Logout</Link>
-      
       <SearchBar onSearch={onSearch} random={random} />
     </div>
   );
