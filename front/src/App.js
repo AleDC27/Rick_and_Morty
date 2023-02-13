@@ -35,40 +35,40 @@ useEffect(() => {
 }, [access]);
 
 //front 
-// function onSearch(character) {
-//   fetch(`https://rickandmortyapi.com/api/character/${character}`)
-//      .then((response) => response.json())
-//      .then((data) => {
-//         if (data.name) {
-//            setCharacters((oldChars) => [...oldChars, data]);
-//         } else {
-//            window.alert('No hay personajes con ese ID');
-//         }
-//      });
-//          /////
-//          setCharacters(characters.filter(char=>char.id!=character))
-//          /////
-// }
-
-//edit del back
- function onSearch(character) {
-  //web Server
-  //fetch(`http://localhost:3001/rickandmorty/character/${character}`)
-  //Promesas
-  fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
+function onSearch(character) {
+  fetch(`https://rickandmortyapi.com/api/character/${character}`)
      .then((response) => response.json())
      .then((data) => {
-      console.log(data)
         if (data.name) {
            setCharacters((oldChars) => [...oldChars, data]);
         } else {
            window.alert('No hay personajes con ese ID');
         }
      });
-         ///
+         /////
          setCharacters(characters.filter(char=>char.id!=character))
-         ///
+         /////
 }
+
+//edit del back
+//  function onSearch(character) {
+//   //web Server
+//   //fetch(`http://localhost:3001/rickandmorty/character/${character}`)
+//   //Promesas
+//   fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
+//      .then((response) => response.json())
+//      .then((data) => {
+//       console.log(data)
+//         if (data.name) {
+//            setCharacters((oldChars) => [...oldChars, data]);
+//         } else {
+//            window.alert('No hay personajes con ese ID');
+//         }
+//      });
+//          ///
+//          setCharacters(characters.filter(char=>char.id!=character))
+//          ///
+// }
 
 //para que no se repitan codigo extra pero tiene una advertencia
 // const onSearch = (character) => {
