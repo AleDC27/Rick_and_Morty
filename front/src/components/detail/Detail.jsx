@@ -1,25 +1,23 @@
-import { useEffect, useState  } from 'react'
-import { useParams ,useNavigate } from 'react-router-dom'
+import { useEffect, useState  } from 'react';
+import { useParams ,useNavigate } from 'react-router-dom';
+import styles from './detail.module.css'
 //import { Link } from 'react-router-dom'
 
 export default function Detail() {
 
     const {detailId}=useParams()
-
     const [character,setCharacter]=useState({})
     // console.log(typeof character.origin ==="object")
-
     const navigate=useNavigate();
-
     const handleClick=()=>navigate("/home");
-    
-
 
     useEffect(() => {
-      //front
-       fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
-      //back
-        // fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
+       //front
+       //fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
+       //back promesas
+       //fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
+       //Express
+         fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
           .then((response) => response.json())
           .then((char) => {
             if (char.name) {
@@ -37,8 +35,9 @@ export default function Detail() {
   return (
 
     // <div>{character?
-        <div style={{background:"red" ,display:"inline-block" }}>
-        <h1>{character.name}</h1>
+        <div className={`${styles.contain}`}>
+          <div className={`${styles.card}`}>
+          <h1>{character.name}</h1>
         <h5>{character.status} </h5>
         <h5>{character.species} </h5>
         <h5>{character.gender} </h5>
@@ -53,6 +52,8 @@ export default function Detail() {
         {/* </div>:""}   */}
 
         <button onClick={handleClick}>HOME</button>
+          </div>
+
         </div>
 
 

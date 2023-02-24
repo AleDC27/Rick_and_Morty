@@ -13,7 +13,15 @@ export function Card(props) {
          props.deleteFavorite(props.id)
       }else {
          setIsFav(true)
-         props.addFavorite(props)
+         const character = {
+            key:props.id,
+            id: props.id,
+            name: props.name,
+            image: props.image,
+            species: props.species,
+            gender: props.gender,
+          };
+          props.addFavorite(character)
       }
    }
    
@@ -58,6 +66,7 @@ export function mapStateToProps (state){
 export function mapDispatchToProps(dispatch){
    return {
       addFavorite: function(fav){
+         console.log("pasamos por dispatch")
          dispatch(addFavorite(fav))
       },
       deleteFavorite: function(id){

@@ -1,0 +1,8 @@
+.contain{
+    background: white;
+}
+
+.content_cards{
+    background: red;
+    display: flex;
+}
