@@ -1,12 +1,20 @@
 .content_search{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+   background: rgb(7, 7, 7);
+   background:linear-gradient(90deg,rgba(27, 27, 27, 0.8)100%,rgba(3, 3, 3, 0.5)100%,rgb(27, 27, 27) 100%);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 100%;
+   position: fixed;
+   z-index: 90000;
+   padding: 0px 0;
  }
  .link{
     color: aliceblue;
     text-decoration: none;
     border-radius: 5px;
-    background: black;
-    padding: 5px;
+    font-size: 30px;
+ }
+ .link:hover{
+   color: rgb(219, 23, 23);
  }

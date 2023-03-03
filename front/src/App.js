@@ -7,6 +7,7 @@ import Detail from './components/detail/Detail'
 import Form from './components/form/Form.jsx'
 import  Favorites from './components/favorites/Favorites.jsx'
 import Error from "./components/error/Error.jsx"
+import CreateChar from './components/createChar/CreateChart.jsx'
 
 
 function App () {
@@ -16,7 +17,7 @@ const [characters,setCharacters]=useState([]);
 
 //esto es la seguridad del fromulario
 const [access,setAccsess]=useState(true);
-const username="waltergordilloaliaspily@gmail.com";
+const username="henry@gmail.com";
 const password="123456qa";
 const navigate=useNavigate()
 
@@ -121,6 +122,7 @@ const onClose=(id)=>{
         <Route path='/about' element={<About/>} />
         <Route path='/favorites' element={<Favorites/>} />
         <Route path='/detail/:detailId' element={<Detail/>}/>
+        {/* <Route path='/createChar' element={<CreateChar  onClose={onClose} /> }/> */}
         <Route path='*' element={<Error/>}/>
       </Routes>
     </div>

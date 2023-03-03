@@ -49,6 +49,7 @@ function rootReducer(state = initialState, { type, payload }) {
           console.log("reducer all",state.allCharacters) */
           return{
             ...state,
+            allCharacters:payload,
             myFavorites:payload
           };
     default:

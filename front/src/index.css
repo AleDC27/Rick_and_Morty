@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Rick and Morty';
+  src: url('./assets/get_schwifty.ttf'); /* la ruta a la fuente descargada */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,11 +10,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./assets/Captura\ de\ pantalla\ \(293\).png);
   /*background-size: cover;
   background-position:center;*/
   box-sizing: border-box;
+  font-family: 'Rick and Morty', sans-serif;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

@@ -1,3 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+    background-image: url('../../assets/home.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 90.9vh;
+    max-height: fit-content;
+    padding-top: 60px;
+
+}
+
 .content_cards{
     display: flex;
     justify-content: center;

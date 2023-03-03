@@ -1,19 +1,18 @@
 .content_buscador{
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 }
 .buscador{
-    min-height: 50px;
+    min-height: 40px;
     max-width: 150px;
-    padding: 0 1rem;
     color: #fff;
     font-size: 15px;
     border: 1px solid #5e4dcd;
     border-radius: 6px 0 0 6px;
-    background-color: transparent;
+    background-color: transparent; 
 }
 .search_button{
-    min-height: 50px;
+    min-height: 40px;
     padding: .5em 1em;
     border: none;
     border-radius: 0 6px 6px 0;
@@ -22,6 +21,8 @@
     font-size: 15px;
     cursor: pointer;
     transition: background-color .3s ease-in-out;
+    position: relative;
+    top:4px
 }
 
 .search_button:hover {
@@ -36,7 +37,7 @@
   .random_button{
     --c1: #f6d365;
     --c2: #fda085;
-    padding: 15px 30px;
+    padding: 10px 20px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;

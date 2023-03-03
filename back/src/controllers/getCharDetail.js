@@ -37,7 +37,8 @@ const getCharDetail = async(req, res) => {
                 name: datailApi.name,
                 gender: datailApi.gender,
                 species: datailApi.species,
-                origin: datailApi.origin
+                origin: datailApi.origin,
+                status: datailApi.status,
             }
             res.status(200).send(detailChar);
 

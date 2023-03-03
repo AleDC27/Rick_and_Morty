@@ -5,7 +5,6 @@ export default function SearchBar(props) {
    const {onSearch,random}=props;
    const [character,setCharacter]=useState("")
 
-
    const handleChange=(event)=>{
       setCharacter(event.target.value)
    }

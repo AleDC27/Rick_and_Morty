@@ -25,7 +25,7 @@ export default function Form(props) {
   return (
     <div className={s.container}>
       <form className={s.container_form} onSubmit={handleSubmit}>
-      <h2>Complete sus datos</h2>
+      <h2>Complete your data</h2>
         <label htmlFor="email">Email</label>
         <input
           type="text"
@@ -33,12 +33,12 @@ export default function Form(props) {
           name="username"
           value={userData.username}
           onChange={handleinputChange}
-          placeholder="email"
+          placeholder="Email"
           className={s.input_form}
           autoComplete="username"
         />
         {
-          errors.username?<span style={{color:"red"}}>{errors.username}</span>:null
+          errors.username?<span className={s.error}>{errors.username}</span>:null
         }
         <label htmlFor="password">Password</label>
         <input
@@ -47,11 +47,11 @@ export default function Form(props) {
           name="password"
           value={userData.password}
           onChange={handleinputChange}
-          placeholder="password"
+          placeholder="Password"
           className={s.input_form}
           autoComplete="current-password"
         />
-        {errors.password?<span style={{color:"red"}}>{errors.password}</span>:null}
+        {errors.password?<span className={s.error}>{errors.password}</span>:null}
         <div className={s.content_submit}>
         <input type="submit" className={s.input_submit} />
         </div>

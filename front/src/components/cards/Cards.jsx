@@ -4,10 +4,12 @@ import styles from './cards.module.css'
 export default function Cards(props) {
    let id=0;
    const { characters,onClose} = props;
-   return <div className={`${styles.content_cards}`} >
+   return <div className={styles.container}>
+       <div className={`${styles.content_cards}`} >
       {
          characters.map(cur=>
             <Card 
+            styles={styles.card}
             key={id+=1}
             name={cur.name}
             species={cur.species}
@@ -18,5 +20,7 @@ export default function Cards(props) {
             />
          )
       }
-   </div>;
+   </div>
+   </div>
+
 }

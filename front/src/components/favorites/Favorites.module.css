@@ -1,8 +1,55 @@
-.contain{
-    background: white;
+.contain {
+  width: 100%;
+  background-image: url('../../assets/favoritos1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  min-height: 90.9vh;
+  max-height: fit-content;
+  padding-top: 60px;
 }
 
-.content_cards{
-    background: red;
-    display: flex;
+.filtros {
+/* From https://css.glass */
+border-radius: 16px;
+box-shadow: 4px 4px 30px rgba(5, 5, 5, 5);
+backdrop-filter: blur(4.4px);
+-webkit-backdrop-filter: blur(4.4px);
+border: 1px solid rgba(10, 229, 229, 0.48);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  padding: 7px;
+}
+.filtros select {
+    padding: 0.5em;
+    outline: none;
+    margin: 0 5px;
+    border: 2px solid rgb(56, 18, 193);
+    background-color: transparent;
+    border-radius: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.content_cards {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+.contain_sinFavorites{
+  border: 1px solid #ccc;
+  background-image: url('../../assets/icegif-526.gif');
+  width: 444px;
+  height: 285px;
+  border: 4px solid rgb(12, 214, 39);
+}
+.sinFavorites{
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 510px;
+  top: 360px;
 }

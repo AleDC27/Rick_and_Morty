@@ -1,12 +1,66 @@
-.contain{
-    background: red;
-    width: 100%;
+.container{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/873/692/desktop-wallpaper-interdimensional-rss-the-rick-and-morty-podcast-rick-and-morty-outer-space.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 90.9vh;
+    max-height: fit-content;
+    padding-top: 60px;
 }
-.card{
+.contain{
+    min-width: 80%;
+    margin: 75px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 60%;
+    border-radius: 1rem;
+    background: rgb(255, 254, 254);
+    background:linear-gradient(90deg,rgba(142, 235, 99, 0.8)100%,rgba(129, 247, 129, 0.5)0%,rgb(165, 218, 144) 0%);
+    box-shadow: 5px 5px 15px 15px black; 
+    border: 5px solid rgb(0, 0, 0);
+    
+}
 
+.contain_img img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 5px 0;
+    border: 5px solid rgb(10, 10, 10);
+    
+}
+.contain_image:hover {
+    cursor: pointer;
+    transform:scale(1.1);transform:scale(1.1);
+    transition-duration: .4s;
+  }
+.contain_img{
+    width: 60rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 50rem;
+}
+button{
+    border-radius: 20%;
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+button:hover{
+    transition: 0.3s;
+    background: rgb(4, 238, 43);
+}
+
+.h5{
+border:2 px solid black;
 }
 

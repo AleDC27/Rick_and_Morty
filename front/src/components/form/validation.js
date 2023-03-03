@@ -3,10 +3,10 @@ const regexPassword= /^(?=.*?[a-z])(?=.*?[0-9]).{6,10}$/;
 
 export default function validation(inputs) {
   let errors={}
-  if(!regexEmail.test(inputs.username))errors.username="debe ingresar un email valido";
-  else if(!inputs.username)errors.username="el nombre del usuario no puede estar vacio";
-  else if(inputs.username.length>35) errors.username="el nombre del usuario debe ser menor a 35 caracteres";
-  else if(!regexPassword.test(inputs.password))errors.password="la contraceña debe tener al menos un numero";
-  else if(inputs.password.length<5 && inputs.password.length>10) errors.password="la contraceña debe tener entre 6 a 10 caracteres"
+  if(!regexEmail.test(inputs.username))errors.username="You must enter a valid email";
+  else if(!inputs.username)errors.username="username cannot be empty";
+  else if(inputs.username.length>35) errors.username="username must be less than 35 characters";
+  else if(!regexPassword.test(inputs.password))errors.password="the password must have at least one number";
+  else if(inputs.password.length<5 && inputs.password.length>10) errors.password="password must be between 6 to 10 characters"
 return errors;
 }
