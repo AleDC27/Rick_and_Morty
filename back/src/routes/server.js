@@ -2,6 +2,9 @@ const express = require('express');
 const { router } = require('../routes/index');
 const cors = require('cors')
 const PORT = 3001;
+const {saveApiData}=require('../controllers/saveApiData');
+const {sequelize}=require('../DB_connection');
+const Character = require('../models/Character');
 
 const server = express();
 
@@ -18,7 +21,17 @@ server.use((req, res, next) => {
 
 server.use('/', router);
 
-server.listen(PORT, () => {
-   console.log('Server raised in port ' + PORT);
-});
+
+sequelize.sync({force:true}).then(async()=>{
+   console.log("antes del saveApiData")
+   //console.log(await saveApiData())
+   //console.log(Character)
+   await saveApiData();
+   console.log("db,connect")
+   server.listen(PORT, () => {
+      console.log('Server raised in port ' + PORT);
+   });
+})
+
+
 
