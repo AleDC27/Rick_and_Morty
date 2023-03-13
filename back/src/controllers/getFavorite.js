@@ -1,17 +1,13 @@
-let  favs  = require('../utils/favs');
+const {Favorites}=require('../DB_connection');
 
-//suponiendo que tenemos base de datos aremos lop siguiente
-// const getFavorite = async function(req, res) => {
-//     try {
-//         const fav=await favs.findAll()
-//         res.status(200).json(favs)
-//     } catch (error) {
-//         res.status(400).send("error")
-//     }
-
-const getFavorite = (req, res) => {
-    console.log("getFavorite")
-    res.status(200).json(favs)
+const getFavorite =async (req, res) => {
+    try {
+        const favorites=await Favorites.findAll();
+        favorites.length===0?res.status(404).send('No favorites yet')
+        :res.status(200).json(favorites)
+    } catch (error) {
+        res.status(404).json({error:error.message})
+    }
 }
 
 module.exports =  getFavorite 

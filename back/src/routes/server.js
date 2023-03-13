@@ -22,11 +22,10 @@ server.use((req, res, next) => {
 server.use('/', router);
 
 
-sequelize.sync({force:true}).then(async()=>{
+sequelize.sync({force:false}).then(async()=>{
    console.log("antes del saveApiData")
-   //console.log(await saveApiData())
-   //console.log(Character)
    await saveApiData();
+   await 
    console.log("db,connect")
    server.listen(PORT, () => {
       console.log('Server raised in port ' + PORT);

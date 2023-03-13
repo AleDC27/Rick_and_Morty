@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-   sequelize.define('Character', {
+   sequelize.define('Favorites', {
       id:{
          type:DataTypes.INTEGER,
          allowNull:false,
@@ -13,9 +13,9 @@ module.exports = (sequelize) => {
          allowNull:false
       },
       species: {
-         type: DataTypes.STRING,
-         allowNull: false
-      },
+        type: DataTypes.STRING,
+        allowNull: false
+     },
       status:{
          type:DataTypes.STRING,
          allowNull:false
@@ -32,5 +32,7 @@ module.exports = (sequelize) => {
          type:DataTypes.STRING,
          allowNull:false
       }
-   });
+   },{
+    timestamps: false
+ });
 };
